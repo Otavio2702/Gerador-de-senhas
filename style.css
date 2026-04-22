@@ -1,0 +1,204 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+    --primary: #b7094c;
+    --secondary: #ffffff;
+    --text: #333;
+    --light: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.685);
+    --border: #c5b9b9;
+    --success: #02a528;
+}
+
+/* Layout geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--primary), #0091ad);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: var(--light);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.grupo-formulario {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#valorComprimento {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.opcao:hover {
+    border-color: var(--primary);
+}
+
+.opcao input {
+    margin-right: 10px;
+}
+
+button {
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0091ad;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--secondary);
+}
+
+.oculto {
+    display: none;
+}
+
+.exibicao-senha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    word-break: break-all;
+}
+
+#botaoCopiar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+#botaoCopiar:hover {
+    background: var(--secondary);
+}
+
+.forca {
+    margin-bottom: 15px;
+}
+
+.barra-forca {
+    width: 100%;
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+#preenchimentoForca {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s, background 0.3s;
+}
+
+#botaoRegenerar {
+    background: var(--success);
+}
+
+#botaoRegenerar:hover {
+    background: #218838;
+}
+
+footer {
+    margin-top: 30px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .opcoes {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}

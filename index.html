@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerador de Senhas</h1>
+            <p>Crie senhas fortes e personalizadas instantaneamente.</p>
+        </header>
+        <main>
+            <form id="formularioSenha">
+                <div class="grupo-formulario">
+                    <label for="comprimento">Comprimento da senha:</label>
+                    <input type="range" id="comprimento" min="4" max="32" value="12">
+                    <span id="valorComprimento">12</span>
+                </div>
+                <div class="opcoes">
+                    <label class="opcao">
+                        <input type="checkbox" id="maiusculas" checked>
+                        <span>Letras maiúsculas (A-Z)</span>
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" id="minusculas" checked>
+                        <span>Letras minúsculas (a-z)</span>
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" id="numeros" checked>
+                        <span>Números (0-9)</span>
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" id="simbolos">
+                        <span>Símbolos (!@#$%^&*)</span>
+                    </label>
+                </div>
+                <button type="submit" id="botaoGerar">Gerar Senha</button>
+            </form>
+            <div id="resultado" class="resultado oculto">
+                <div class="exibicao-senha">
+                    <span id="senha"></span>
+                    <button id="botaoCopiar" title="Copiar senha">Copiar senha📋</button>
+                </div>
+                <div class="forca">
+                    <span>Força da senha:</span>
+                    <div class="barra-forca">
+                        <div id="preenchimentoForca"></div>
+                    </div>
+                    <span id="textoForca">Fraca</span>
+                </div>
+                <button id="botaoRegenerar">Gerar Nova Senha</button>
+            </div>
+        </main>
+        <footer>
+            <p>Suas senhas não são armazenadas. Use com responsabilidade.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
