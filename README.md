@@ -14,7 +14,4 @@ Copiar senha com um clique
 HTML5
 CSS3
 JavaScript
-🤖 Uso de IA
-
-Este projeto foi desenvolvido com o apoio de ferramentas de Inteligência Artificial, utilizadas para auxiliar na geração de ideias, estruturação do código e resolução de dúvidas durante o desenvolvimento.
 
